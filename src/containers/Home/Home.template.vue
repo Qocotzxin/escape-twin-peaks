@@ -1,17 +1,17 @@
 <template>
   <div class="home__container">
     <div class="loader" v-if="loading">
-      <img src="../../assets/loader.svg" alt="Logo del bacl lodge" />
+      <img src="../../assets/icons/loader.svg" alt="Logo del bacl lodge" />
       <h2>Preparando el Back Lodge...</h2>
     </div>
     <div class="home__body">
       <img
-        src="../../assets/main.jpg"
+        src="../../assets/images/main.jpg"
         alt="Imagen del Black Lodge de fondo"
         :onload="toggleLoader()"
       />
       <h1>Quien mató a Laura <span>Palmer</span>?</h1>
-      <v-btn outlined class="mt-4">Ingresar</v-btn>
+      <v-btn class="mt-4" @click="onClick" outlined>Ingresar</v-btn>
     </div>
   </div>
 </template>
@@ -68,6 +68,7 @@
     h1 {
       cursor: default;
       opacity: 0;
+      text-align: center;
       animation-name: flicker;
       animation-duration: 2s;
       animation-timing-function: linear;
@@ -84,7 +85,6 @@
     }
 
     button {
-      cursor: pointer;
       opacity: 0;
       animation: focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s both;
 

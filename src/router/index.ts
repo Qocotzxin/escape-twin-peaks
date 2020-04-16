@@ -1,3 +1,4 @@
+import { IntroComponent } from "@/components/Intro/Intro.component";
 import { HomeComponent } from "@/containers/Home/Home.component";
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
@@ -9,6 +10,11 @@ const routes: Array<RouteConfig> = [
     path: "/",
     name: "Home",
     component: HomeComponent
+  },
+  {
+    path: "/intro",
+    name: "Intro",
+    component: IntroComponent
   }
 ];
 

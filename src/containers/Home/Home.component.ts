@@ -11,4 +11,8 @@ export class HomeComponent extends Vue {
   public toggleLoader() {
     this.loading = false;
   }
+
+  public onClick() {
+    this.$router.push({ name: "Intro" });
+  }
 }
