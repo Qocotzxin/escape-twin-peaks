@@ -1,157 +1,97 @@
 <template>
-  <div class="home">
-    <h1>Dónde está el agente <span>Cooper</span>?</h1>
-    <v-btn outlined class="mt-4">Ingresar</v-btn>
+  <div class="home__container">
+    <div class="loader" v-if="loading">
+      <img src="../../assets/loader.svg" alt="Logo del bacl lodge" />
+      <h2>Preparando el Back Lodge...</h2>
+    </div>
+    <div class="home__body">
+      <img
+        src="../../assets/main.jpg"
+        alt="Imagen del Black Lodge de fondo"
+        :onload="toggleLoader()"
+      />
+      <h1>Quien mató a Laura <span>Palmer</span>?</h1>
+      <v-btn outlined class="mt-4">Ingresar</v-btn>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.home {
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #cb4335;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  background: url(../../assets/main.png) no-repeat center center fixed;
-  animation: move-in 10s linear;
+  z-index: 1;
+  animation: bg-color 3s linear infinite alternate;
 
-  h1 {
-    cursor: default;
-    opacity: 0;
-    animation-name: flicker;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 4s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  img {
+    width: 30%;
+    animation: flicker 3s linear infinite alternate;
+  }
 
-    &:hover {
-      span {
-        transform: rotateY(180deg);
-        color: crimson;
+  h2 {
+    animation: blink 3s both infinite;
+  }
+}
+
+.home {
+  &__container {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    animation: focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s both;
+
+    img {
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    h1 {
+      cursor: default;
+      opacity: 0;
+      animation-name: flicker;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      &:hover {
+        span {
+          transform: rotateY(180deg);
+          color: crimson;
+        }
       }
     }
-  }
 
-  button {
-    cursor: pointer;
-    opacity: 0;
-    animation: focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) 4s both;
+    button {
+      cursor: pointer;
+      opacity: 0;
+      animation: focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s both;
 
-    &:hover {
-      transform: rotateY(180deg);
+      &:hover {
+        transform: rotateY(180deg);
+      }
     }
-  }
-}
-
-@keyframes move-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 90%;
-  }
-}
-
-@keyframes focus-in {
-  0% {
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes flicker {
-  0% {
-    opacity: 0.1;
-  }
-
-  10% {
-    opacity: 0.2;
-  }
-
-  20% {
-    opacity: 0.3;
-  }
-
-  100% {
-    opacity: 1;
-  }
-  31.98% {
-    opacity: 1;
-  }
-  32% {
-    opacity: 0;
-  }
-  32.8% {
-    opacity: 0;
-  }
-  32.82% {
-    opacity: 1;
-  }
-  34.98% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 0;
-  }
-  35.7% {
-    opacity: 0;
-  }
-  35.72% {
-    opacity: 1;
-  }
-  36.98% {
-    opacity: 1;
-  }
-  37% {
-    opacity: 0;
-  }
-  37.6% {
-    opacity: 0;
-  }
-  37.62% {
-    opacity: 1;
-  }
-  67.98% {
-    opacity: 1;
-  }
-  68% {
-    opacity: 0;
-  }
-  68.4% {
-    opacity: 0;
-  }
-  68.42% {
-    opacity: 1;
-  }
-  95.98% {
-    opacity: 1;
-  }
-  96% {
-    opacity: 0;
-  }
-  96.7% {
-    opacity: 0;
-  }
-  96.72% {
-    opacity: 1;
-  }
-  98.98% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-  }
-  99.6% {
-    opacity: 0;
-  }
-  99.62% {
-    opacity: 1;
   }
 }
 </style>
