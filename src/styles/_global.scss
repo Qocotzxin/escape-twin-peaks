@@ -15,3 +15,9 @@ html {
 p {
   font-size: 18px;
 }
+
+.glowing-border {
+  border: 2px solid wheat;
+  border-radius: 4px;
+  box-shadow: 0 0 10px crimson;
+}

@@ -31,6 +31,7 @@
           <img
             src="../../assets/images/enigma-1.jpg"
             alt="Imagen de mueble archivador"
+            class="glowing-border"
           />
         </div>
         <div v-else key="detail">
@@ -46,6 +47,7 @@
                   src="../../assets/images/hermit.jpg"
                   alt="Imagen de la carta de tarot 'El ermitaño'"
                   v-on="on"
+                  class="glowing-border"
                 />
               </template>
               <span>El ermitaño</span>
@@ -110,9 +112,6 @@
     img {
       width: 100%;
       max-width: 600px;
-      border: 2px solid wheat;
-      border-radius: 4px;
-      box-shadow: 0 0 10px crimson;
     }
   }
 
