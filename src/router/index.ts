@@ -1,5 +1,6 @@
+import { FirstEnigmaComponent } from "@/components/FirstEnigma/FirstEnigma.component";
 import { IntroComponent } from "@/components/Intro/Intro.component";
-import { HomeComponent } from "@/containers/Home/Home.component";
+import { HomeComponent } from "@/components/Home/Home.component";
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 
@@ -15,6 +16,11 @@ const routes: Array<RouteConfig> = [
     path: "/intro",
     name: "Intro",
     component: IntroComponent
+  },
+  {
+    path: "/enigma-1",
+    name: "First",
+    component: FirstEnigmaComponent
   }
 ];
 

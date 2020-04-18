@@ -35,7 +35,7 @@
             Cooper, pero todos los indicios apuntan a que hay algo en la
             historia que
             <span>no encaja</span>. Lamentablemente para Cooper,
-            <span>pasarán varios años</span> hasta que un nueva serie de
+            <span>pasarán 25 años</span> hasta que un nueva serie de
             <span>eventos macabros</span> llamen la atención de los integrantes
             de la policía, y decidan retomar la inconclusa investigación para
             encontrar a Cooper y descubrir lo que
@@ -58,7 +58,7 @@
           <img
             src="../../assets/icons/zig-zag.svg"
             alt="Icono separador representativo de Twin Peaks"
-            @click="onLastClick()"
+            @click="onStepChange"
           />
         </div>
       </transition>
@@ -95,30 +95,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 600px;
+    text-align: center;
 
-    &:hover span {
-      color: crimson;
-      transition: color 2s;
-    }
-
-    p {
-      font-size: 18px;
+    span {
+      animation: text-color 4s linear infinite alternate;
     }
 
     img {
       width: 8em;
       cursor: pointer;
-
-      &:hover {
-        transform: rotateY(180deg);
-      }
+      animation: heartbeat 1.5s ease-in-out infinite both;
     }
   }
-}
-
-.highlight span {
-  color: crimson;
-  transition: color 2s;
 }
 
 .fade-enter-active,

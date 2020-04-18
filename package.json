@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@types/vue2-hammer": "^2.1.0",
+    "@types/vuedraggable": "^2.23.0",
     "core-js": "^3.6.4",
     "material-design-icons-iconfont": "^5.0.1",
     "vue": "^2.6.11",
@@ -16,6 +17,7 @@
     "vue-property-decorator": "^8.4.1",
     "vue-router": "^3.1.6",
     "vue2-hammer": "^2.1.2",
+    "vuedraggable": "^2.23.2",
     "vuetify": "^2.2.11"
   },
   "devDependencies": {

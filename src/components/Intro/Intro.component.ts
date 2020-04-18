@@ -7,11 +7,13 @@ import Template from "./Intro.template.vue";
 })
 export class IntroComponent extends Vue {
   public step = 0;
-  public highlight = false;
 
   public onStepChange() {
     this.step++;
-    this.highlight = false;
+
+    if (this.step === 3) {
+      this.$router.push({ name: "First" });
+    }
   }
 
   public onLastClick() {
