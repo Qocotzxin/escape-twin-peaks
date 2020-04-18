@@ -18,10 +18,6 @@
           pero nadie recuerda la clave de 4 dígitos. Habrá alguna pista en el
           armario?
         </p>
-        <!-- <p>
-          Mirando en detalle, ven algo al costado de los cajones donde están los
-          expedientes...
-        </p> -->
       </div>
 
       <transition name="fade" mode="out-in">

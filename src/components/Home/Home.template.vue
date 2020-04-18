@@ -1,9 +1,5 @@
 <template>
   <div class="home__container">
-    <div class="loader" v-if="loading">
-      <img src="../../assets/icons/loader.svg" alt="Logo del bacl lodge" />
-      <h2>Preparando el Back Lodge...</h2>
-    </div>
     <div class="home__body">
       <img
         src="../../assets/images/main.jpg"
@@ -17,29 +13,6 @@
 </template>
 
 <style lang="scss" scoped>
-.loader {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #cb4335;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  animation: bg-color 3s linear infinite alternate;
-
-  img {
-    width: 30%;
-    animation: flicker 3s linear infinite alternate;
-  }
-
-  h2 {
-    animation: blink 3s both infinite;
-  }
-}
-
 .home {
   &__container {
     width: 100%;

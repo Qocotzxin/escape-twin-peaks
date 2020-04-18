@@ -1,15 +1,18 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import Template from "./Home.template.vue";
+import { EventBus } from "@/event-bus";
 
 @Component({
   mixins: [Template]
 })
 export class HomeComponent extends Vue {
-  public loading = true;
+  public created() {
+    EventBus.$emit("loadOn");
+  }
 
   public toggleLoader() {
-    this.loading = false;
+    EventBus.$emit("loadOff");
   }
 
   public onClick() {
