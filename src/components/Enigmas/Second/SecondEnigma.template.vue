@@ -17,7 +17,7 @@
       </p>
 
       <p class="font-italic">
-        "Swa jcowa uw awu sw ycm xizmkmu"
+        "Ilp yrelp kl plk il txh sduhfhq"
       </p>
       <div class="wheel" @click="onWheelChange">
         <img
@@ -31,7 +31,7 @@
           :class="{ internal__paused: paused }"
         />
         <span>
-          P = M
+          M = P
         </span>
       </div>
 

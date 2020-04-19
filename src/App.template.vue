@@ -22,7 +22,7 @@
 .loader {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   background-color: #cb4335;
   display: flex;
