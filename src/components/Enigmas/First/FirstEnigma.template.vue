@@ -14,9 +14,8 @@
         <p>
           Al parecer la policía tiene mucha información disponible, pero hay un
           pequeño problema. Pasaron 25 años y todos los registros sobre el caso
-          de Laura Palmer y la investigación de Cooper quedaron bajo candado,
-          pero nadie recuerda la clave de 4 dígitos. Habrá alguna pista en el
-          armario?
+          de Laura Palmer y la investigación de Cooper quedaron bajo candado, y
+          como era de esperarse, nadie recuerda la clave de 4 dígitos...
         </p>
       </div>
 
@@ -29,7 +28,7 @@
           key="intro"
         >
           <img
-            src="../../assets/images/enigma-1.jpg"
+            src="../../../assets/images/enigma-1.jpg"
             alt="Imagen de mueble archivador"
             class="glowing-border"
           />
@@ -37,14 +36,14 @@
         <div v-else key="detail">
           <div class="enigma__view pt-8">
             <img
-              src="../../assets/icons/atomic-bomb.svg"
+              src="../../../assets/icons/atomic-bomb.svg"
               alt="Icono de bomba atómica"
             />
             <span>+</span>
             <v-tooltip top>
               <template v-slot:activator="{ on }">
                 <img
-                  src="../../assets/images/hermit.jpg"
+                  src="../../../assets/images/hermit.jpg"
                   alt="Imagen de la carta de tarot 'El ermitaño'"
                   v-on="on"
                   class="glowing-border"
@@ -53,26 +52,7 @@
               <span>El ermitaño</span>
             </v-tooltip>
           </div>
-          <div class="enigma__answer">
-            <v-text-field
-              color="primary"
-              outlined
-              placeholder="Respuesta"
-              class="mt-8 mr-8"
-              v-model="input"
-              type="number"
-              :rules="rules"
-              @keyup.enter="onAnswer"
-            ></v-text-field>
-            <v-btn
-              outlined
-              color="primary"
-              :disabled="!input.length"
-              @click="onAnswer"
-            >
-              Enviar
-            </v-btn>
-          </div>
+          <AnswerFormComponent :correctAnswer="answer" :rules="rules" />
         </div>
       </transition>
     </div>
@@ -113,12 +93,6 @@
       width: 100%;
       max-width: 600px;
     }
-  }
-
-  &__answer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 }
 

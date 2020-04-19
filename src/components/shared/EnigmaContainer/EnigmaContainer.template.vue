@@ -28,7 +28,7 @@
     height: 100%;
     width: 100%;
     overflow: auto;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
   }
 }
 </style>

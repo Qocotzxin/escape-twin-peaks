@@ -12,7 +12,7 @@ export class IntroComponent extends Vue {
     this.step++;
 
     if (this.step === 3) {
-      this.$router.push({ name: "First" });
+      this.$router.push({ name: "Enigma-1" });
     }
   }
 

@@ -1,28 +1,8 @@
-import { FirstEnigmaComponent } from "@/components/FirstEnigma/FirstEnigma.component";
-import { IntroComponent } from "@/components/Intro/Intro.component";
-import { HomeComponent } from "@/components/Home/Home.component";
 import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
+import VueRouter from "vue-router";
+import { routes } from "./routes";
 
 Vue.use(VueRouter);
-
-const routes: Array<RouteConfig> = [
-  {
-    path: "/",
-    name: "Home",
-    component: HomeComponent
-  },
-  {
-    path: "/intro",
-    name: "Intro",
-    component: IntroComponent
-  },
-  {
-    path: "/enigma-1",
-    name: "First",
-    component: FirstEnigmaComponent
-  }
-];
 
 const router = new VueRouter({
   mode: "hash",
