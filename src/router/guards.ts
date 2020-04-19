@@ -14,7 +14,7 @@ export function setInitialPage(next: (t?: object) => void) {
     next({
       name: `Enigma-${Object.keys(ENIGMA_CODE).find(
         k => ENIGMA_CODE[+k] === progress
-      )!}`
+      )}`
     });
   } else {
     next();
@@ -36,8 +36,8 @@ export function isAllowed(to: Route, next: (t?: object) => void) {
   if (progress && currentEnigma) {
     progressValue = Object.keys(ENIGMA_CODE).find(
       k => ENIGMA_CODE[+k] === progress
-    )!;
-    isAllowed = +progressValue <= +currentEnigma;
+    );
+    isAllowed = progressValue ? +progressValue <= +currentEnigma : false;
   }
 
   if (!isAllowed) {
