@@ -52,6 +52,7 @@
 
 .wheel {
   position: relative;
+  cursor: pointer;
 
   img:first-child {
     width: 300px;

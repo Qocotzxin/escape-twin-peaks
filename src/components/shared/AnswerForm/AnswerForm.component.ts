@@ -17,7 +17,7 @@ export class AnswerFormComponent extends Vue {
   public input = "";
 
   public onAnswer() {
-    if (this.input === this.correctAnswer) {
+    if (this.input.toLowerCase() === this.correctAnswer.toLowerCase()) {
       EventBus.$emit("loadOn");
       const enigma = getEnigmaNumber(this.$route.name);
       storageService.saveUserProgress(enigma);
