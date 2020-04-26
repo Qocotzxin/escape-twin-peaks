@@ -1,5 +1,5 @@
 import { storageService } from "@/services/storage.service";
-import { getEnigmaNumber } from "@/utils/helpers";
+import { getEnigmaNumber, getLastEnigma } from "@/utils/helpers";
 import { Route } from "vue-router";
 import { ENIGMA_CODE } from "@/utils/enigma-code";
 
@@ -10,7 +10,8 @@ import { ENIGMA_CODE } from "@/utils/enigma-code";
  */
 export function setInitialPage(next: (t?: object) => void) {
   const progress = storageService.getUserProgress();
-  if (progress) {
+  const lastEnigma = getLastEnigma();
+  if (progress && +progress <= lastEnigma) {
     next({
       name: `Enigma-${Object.keys(ENIGMA_CODE).find(
         k => ENIGMA_CODE[+k] === progress

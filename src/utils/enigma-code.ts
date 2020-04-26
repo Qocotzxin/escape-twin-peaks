@@ -1,4 +1,5 @@
 export const ENIGMA_CODE: { [id: number]: string } = {
-  2: "o7sda93",
-  3: "90asmnl"
+  1: "o7sda93",
+  2: "90asmnl",
+  3: "7aksbf3"
 };

@@ -2,9 +2,9 @@
   <EnigmaContainerComponent>
     <div class="enigma">
       <div class="enigma__text">
-        <h1 class="mb-4 mt-4">25 años después</h1>
+        <h1>25 años después</h1>
 
-        <p class="mt-2">
+        <p>
           Recién llegados a la ciudad de Twin Peaks, deciden tomar rumbo
           inmediatamente hacia la estación de policía para obtener más
           información sobre la investigación que llevaba a cabo Cooper antes de
@@ -61,15 +61,6 @@
 
 <style lang="scss" scoped>
 .enigma {
-  &__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 600px;
-    background: transparent;
-  }
-
   &__view {
     display: flex;
     align-items: center;

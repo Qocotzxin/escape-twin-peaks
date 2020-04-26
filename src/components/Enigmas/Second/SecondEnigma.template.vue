@@ -1,9 +1,9 @@
 <template>
   <EnigmaContainerComponent>
     <div class="enigma__text">
-      <h1 class="mb-4 mt-4">Revisando el pasado</h1>
+      <h1>Revisando el pasado</h1>
 
-      <p class="mt-2">
+      <p>
         La clave no era otra cosa que la fecha de nacimiento de Cooper.
         Finalmente logran abrir el cajón del archivador para comenzar a recabar
         información.
@@ -41,15 +41,6 @@
 </template>
 
 <style lang="scss" scoped>
-.enigma__text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 600px;
-  background: transparent;
-}
-
 .wheel {
   position: relative;
   cursor: pointer;

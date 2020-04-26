@@ -1,6 +1,6 @@
 import { EventBus } from "@/event-bus";
 import { storageService } from "@/services/storage.service";
-import { getEnigmaNumber } from "@/utils/helpers";
+import { getEnigmaNumber, getLastEnigma } from "@/utils/helpers";
 import Vue from "vue";
 import Component from "vue-class-component";
 import { Prop } from "vue-property-decorator";
@@ -21,7 +21,9 @@ export class AnswerFormComponent extends Vue {
       EventBus.$emit("loadOn");
       const enigma = getEnigmaNumber(this.$route.name);
       storageService.saveUserProgress(enigma);
-      this.$router.push({ name: `Enigma-${+enigma + 1}` });
+      this.$router.push({
+        name: +enigma + 1 <= getLastEnigma() ? `Enigma-${+enigma + 1}` : "Home"
+      });
       setTimeout(() => {
         EventBus.$emit("loadOff");
       }, 4000);

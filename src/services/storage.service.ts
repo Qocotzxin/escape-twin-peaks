@@ -4,12 +4,12 @@ export class StorageService extends Vue {
   private key = "tper_progress";
 
   public getUserProgress(): string | null {
-    return sessionStorage ? sessionStorage.getItem(this.key) : null;
+    return localStorage ? localStorage.getItem(this.key) : null;
   }
 
   public saveUserProgress(enigma: string) {
-    if (sessionStorage && enigma) {
-      sessionStorage.setItem(this.key, ENIGMA_CODE[+enigma + 1]);
+    if (localStorage && enigma) {
+      localStorage.setItem(this.key, ENIGMA_CODE[+enigma + 1]);
     }
   }
 }

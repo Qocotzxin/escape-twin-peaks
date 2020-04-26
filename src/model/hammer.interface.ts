@@ -1,0 +1,30 @@
+export interface HammerEvent {
+  angle: number;
+  center: { x: number; y: number };
+  changedPointers: PointerEvent[];
+  deltaTime: number;
+  deltaX: number;
+  deltaY: number;
+  direction: number;
+  distance: number;
+  eventType: number;
+  isFinal: boolean;
+  isFirst: boolean;
+  maxPointers: number;
+  offsetDirection: number;
+  overallVelocity: number;
+  overallVelocityX: number;
+  overallVelocityY: number;
+  pointerType: string;
+  pointers: PointerEvent[];
+  preventDefault: () => void;
+  rotation: number;
+  scale: number;
+  srcEvent: PointerEvent;
+  target: HTMLElement;
+  timeStamp: number;
+  type: string;
+  velocity: number;
+  velocityX: number;
+  velocityY: number;
+}
