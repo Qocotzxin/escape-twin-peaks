@@ -3,6 +3,7 @@ import Component from "vue-class-component";
 import { AnswerFormComponent } from "./../../shared/AnswerForm/AnswerForm.component";
 import { EnigmaContainerComponent } from "./../../shared/EnigmaContainer/EnigmaContainer.component";
 import Template from "./SecondEnigma.template.vue";
+import { HammerEvent } from "@/model/hammer.interface";
 
 @Component({
   mixins: [Template],
@@ -13,9 +14,11 @@ import Template from "./SecondEnigma.template.vue";
 })
 export class SecondEnigmaComponent extends Vue {
   private answer = "Margaret";
-  public paused = false;
+  private rotation = { transform: "rotate(0)" };
 
-  public onWheelChange() {
-    this.paused = !this.paused;
+  public onRotate(e: HammerEvent) {
+    this.rotation = {
+      transform: `rotate(${e.rotation}deg)`
+    };
   }
 }

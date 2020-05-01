@@ -9,6 +9,7 @@
       type="text"
       :rules="rules"
       @keyup.enter="onAnswer"
+      autofocus
     ></v-text-field>
     <v-btn outlined color="primary" :disabled="!input.length" @click="onAnswer">
       Enviar

@@ -17,9 +17,9 @@
       </p>
 
       <p class="font-italic">
-        "Ilp yrelp kl plk il txh sduhfhq"
+        "Dw mrj vr caxwlx cnwmaj jupx zdn mnlra."
       </p>
-      <div class="wheel" @click="onWheelChange">
+      <div class="wheel" v-hammer:rotate="onRotate">
         <img
           src="../../../assets/images/wheel.png"
           alt="Rueda de cifrado Cesar - exterior"
@@ -28,10 +28,10 @@
           src="../../../assets/images/wheel.png"
           alt="Rueda de cifrado Cesar - interior"
           class="internal"
-          :class="{ internal__paused: paused }"
+          :style="rotation"
         />
         <span>
-          M = P
+          A = J
         </span>
       </div>
 
@@ -54,11 +54,6 @@
     position: absolute;
     left: 2em;
     top: 2em;
-    animation: rotate-wheel 15s infinite linear;
-
-    &__paused {
-      animation-play-state: paused;
-    }
   }
 
   span {
