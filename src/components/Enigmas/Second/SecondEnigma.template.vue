@@ -19,7 +19,7 @@
       <p class="font-italic">
         "Dw mrj vr caxwlx cnwmaj jupx zdn mnlra."
       </p>
-      <div class="wheel" v-hammer:rotate="onRotate">
+      <div class="wheel" v-hammer:pan="onRotate">
         <img
           src="../../../assets/images/wheel.png"
           alt="Rueda de cifrado Cesar - exterior"
@@ -43,7 +43,6 @@
 <style lang="scss" scoped>
 .wheel {
   position: relative;
-  cursor: pointer;
 
   img:first-child {
     width: 300px;

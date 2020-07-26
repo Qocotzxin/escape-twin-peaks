@@ -17,6 +17,7 @@ export class SecondEnigmaComponent extends Vue {
   private rotation = { transform: "rotate(0)" };
 
   public onRotate(e: HammerEvent) {
+    console.log(e);
     this.rotation = {
       transform: `rotate(${e.rotation}deg)`
     };
